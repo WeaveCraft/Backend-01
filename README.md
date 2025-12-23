@@ -7,13 +7,13 @@ This repository contains the **Spring Boot backend** of the HolistiQ application
 
 ## Table of Contents
 
-- [Features](#features)  
-- [Technologies](#technologies)  
-- [Getting Started](#getting-started)  
-- [Database](#database)  
-- [Project Structure](#project-structure)  
-- [Contributing](#contributing)  
-- [License](#license)  
+- Features  
+- Technologies  
+- Getting Started  
+- Database  
+- Project Structure  
+- Contributing  
+- License  
 
 ---
 
@@ -49,6 +49,66 @@ This repository contains the **Spring Boot backend** of the HolistiQ application
 
 ### Clone the repository
 
-```bash
-git clone https://github.com/ViktorHurtig/HolistiQ-Backend.git
+git clone https://github.com/ViktorHurtig/HolistiQ-Backend.git  
 cd holistiq-core
+
+### Configure the database
+
+Edit `src/main/resources/application.properties` and set your database credentials:
+
+spring.datasource.url=jdbc:postgresql://localhost:5432/holistiq_test  
+spring.datasource.username=holistiq_user  
+spring.datasource.password=yourpassword  
+spring.jpa.hibernate.ddl-auto=update
+
+> Using a test database ensures you can safely develop without affecting real data.
+
+### Run the application
+
+mvn spring-boot:run  
+
+The backend will start on http://localhost:8080
+
+---
+
+## Database
+
+The backend uses PostgreSQL with the following **core tables**:
+
+- `users`, `roles`, `user_roles` → identity & access  
+- `household`, `household_members` → family management  
+- `account`, `transaction`, `budget` → finance domain  
+- `product`, `shopping_list`, `shopping_list_item` → shopping domain  
+
+---
+
+## Project Structure
+
+holistiQ  
+ ├─ HolistiQApplication.java  
+ ├─ config/        ← security, CORS, database configs  
+ ├─ auth/          ← login, JWT tokens  
+ ├─ user/          ← Users & Roles  
+ ├─ family/        ← Household & Members  
+ ├─ finance/       ← Accounts, Transactions, Budget  
+ ├─ shopping/      ← Products, Shopping Lists  
+ └─ common/        ← Utilities, constants, helpers  
+
+> Each domain has its own package with **entities, repositories, and services**.
+
+---
+
+## Contributing
+
+1. Fork the repository  
+2. Create a new branch (`git checkout -b feature/your-feature`)  
+3. Commit your changes (`git commit -m "Add feature"`)  
+4. Push to your branch (`git push origin feature/your-feature`)  
+5. Create a Pull Request  
+
+---
+
+## License
+
+This project is for **personal family use only**.  
+Not intended for commercial use or redistribution.
