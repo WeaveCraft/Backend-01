@@ -30,12 +30,20 @@ This repository contains the **Spring Boot backend** of the HolistiQ application
 
 ## Technologies
 
-- Java 21  
-- Spring Boot 3.x  
+- Java 25  
+- Spring Boot 4.0.1  
 - Spring Data JPA (Hibernate)  
 - PostgreSQL  
 - Maven  
-- Lombok (optional)  
+- Lombok (optional)
+
+# Dependencies
+
+- Spring Web (WEB)
+- Spring Data JPA (SQL)
+- PostgreSQL Driver (SQL)
+- Spring Security (SECURITY)
+- Lombok (DEVELOPER TOOLS)
 
 ---
 
@@ -43,7 +51,7 @@ This repository contains the **Spring Boot backend** of the HolistiQ application
 
 ### Prerequisites
 
-- Java 21  
+- Java 25  
 - Maven  
 - PostgreSQL installed locally  
 
