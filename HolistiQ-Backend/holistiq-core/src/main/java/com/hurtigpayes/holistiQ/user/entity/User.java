@@ -1,15 +1,19 @@
 package com.hurtigpayes.holistiQ.user.entity;
 
 import jakarta.persistence.*;
+
+import java.math.BigInteger;
 import java.time.Instant;
+import java.util.UUID;
 
 @Entity
 @Table(name = "users")
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(columnDefinition = "uuid", updatable = false, nullable = false)
+    private UUID id;
 
     @Column(nullable = false, unique = true)
     private String email;
@@ -44,7 +48,7 @@ public class User {
 
     // ===== Getters =====
 
-    public Long getId() {
+    public UUID getId() {
         return id;
     }
 
