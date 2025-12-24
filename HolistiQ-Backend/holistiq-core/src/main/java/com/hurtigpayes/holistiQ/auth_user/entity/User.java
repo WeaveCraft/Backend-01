@@ -1,5 +1,6 @@
 package com.hurtigpayes.holistiQ.auth_user.entity;
 
+import com.hurtigpayes.holistiQ.account.entity.Account;
 import com.hurtigpayes.holistiQ.role.entity.Role;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -39,7 +40,7 @@ public class User {
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "users_table",
-            joinColumns = @JoinCulmn(name = "user_id"),
+            joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id")
     )
     private List<Role> roles;
