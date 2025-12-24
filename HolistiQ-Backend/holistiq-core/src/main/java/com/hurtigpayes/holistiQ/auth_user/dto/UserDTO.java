@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.hurtigpayes.holistiQ.account.dto.AccountDTO;
 import com.hurtigpayes.holistiQ.role.entity.Role;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
