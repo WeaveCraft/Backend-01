@@ -45,6 +45,6 @@ public class Account {
     @Enumerated(EnumType.STRING)
     private AccountStatus status;
 
-    @OneToMany(mappedBy = "account", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "account", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private List<Transaction> transactions = new ArrayList<>();
 }
