@@ -6,6 +6,7 @@ import java.math.BigInteger;
 import java.time.Instant;
 import java.util.UUID;
 
+//Made before as test.
 @Entity
 @Table(name = "users")
 public class User {
