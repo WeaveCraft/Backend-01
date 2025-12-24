@@ -120,3 +120,7 @@ holistiQ
 
 This project is for **personal family use only**.  
 Not intended for commercial use or redistribution.
+
+##
+Shortcuts
+wip (Work In Progress)
