@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 @Table(name = "password_reset_code")
 @AllArgsConstructor
 @NoArgsConstructor
-public class PasswordResetDTO {
+public class PasswordReset {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
