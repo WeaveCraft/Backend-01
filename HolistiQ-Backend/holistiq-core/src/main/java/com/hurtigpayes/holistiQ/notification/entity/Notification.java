@@ -1,11 +1,20 @@
 package com.hurtigpayes.holistiQ.notification.entity;
 
+
 import com.hurtigpayes.holistiQ.auth_user.entity.User;
 import com.hurtigpayes.holistiQ.enums.NotificationType;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Notification {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
