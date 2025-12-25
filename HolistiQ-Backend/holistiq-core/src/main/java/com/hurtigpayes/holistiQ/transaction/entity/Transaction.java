@@ -1,5 +1,6 @@
 package com.hurtigpayes.holistiQ.transaction.entity;
 
+import com.hurtigpayes.holistiQ.account.entity.Account;
 import com.hurtigpayes.holistiQ.enums.TransactionStatus;
 import com.hurtigpayes.holistiQ.enums.TransactionType;
 import jakarta.persistence.*;
@@ -37,4 +38,13 @@ public class Transaction {
 
     @Enumerated(EnumType.STRING)
     private TransactionStatus status;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "account_id", nullable = false)
+    private Account account;
+
+    private String sourceAccount;
+    private String destinationAccount;
 }
+
+
