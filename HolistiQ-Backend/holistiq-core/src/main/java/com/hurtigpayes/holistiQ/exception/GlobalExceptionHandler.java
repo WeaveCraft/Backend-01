@@ -17,4 +17,14 @@ public class GlobalExceptionHandler extends RuntimeException {
 
         return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
    }
+
+    @ExceptionHandler(NotFoundException.class)
+    public ResponseEntity<Response<?>> handleNotFoundException(NotFoundException ex){
+        Response<?> response = Response.builder()
+                .statusCode(HttpStatus.NOT_FOUND.value())
+                .message(ex.getMessage())
+                .build();
+
+        return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
+    }
 }
