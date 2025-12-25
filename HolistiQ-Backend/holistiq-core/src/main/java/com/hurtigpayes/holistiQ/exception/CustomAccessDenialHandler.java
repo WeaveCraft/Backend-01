@@ -26,7 +26,7 @@ public class CustomAccessDenialHandler implements AccessDeniedHandler {
 
         Response<?> errorResponse = Response.builder()
                 .statusCode(HttpStatus.FORBIDDEN.value())
-                .message(authException.getMessage())
+                .message(accessDeniedException.getMessage())
                 .build();
 
         response.setContentType("application/json");
