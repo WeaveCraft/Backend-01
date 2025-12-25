@@ -9,6 +9,7 @@ import com.hurtigpayes.holistiQ.auth_user.entity.User;
 import com.hurtigpayes.holistiQ.enums.AccountStatus;
 import com.hurtigpayes.holistiQ.enums.AccountType;
 import com.hurtigpayes.holistiQ.enums.Currency;
+import com.hurtigpayes.holistiQ.transaction.dto.TransactionDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

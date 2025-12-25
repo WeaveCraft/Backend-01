@@ -1,6 +1,7 @@
 package com.hurtigpayes.holistiQ.transaction.dto;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.hurtigpayes.holistiQ.account.entity.Account;
 import com.hurtigpayes.holistiQ.enums.TransactionStatus;
 import com.hurtigpayes.holistiQ.enums.TransactionType;
@@ -23,6 +24,7 @@ public class TransactionDTO {
 
     private TransactionStatus status;
 
+    @JsonBackReference
     private Account account;
 
     private String sourceAccount;
