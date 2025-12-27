@@ -11,7 +11,7 @@ This repository contains the **Spring Boot backend** of the HolistiQ application
 - Technologies  
 - Getting Started   
 - Database   
-- Project Structure   
+- Project Structure    
 - Contributing  
 - License  
 
